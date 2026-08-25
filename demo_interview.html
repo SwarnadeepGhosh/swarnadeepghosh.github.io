@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="generator" content="pandoc">
+    <meta name="description" content="">
+
+    <title>demo_interview</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://mushiyo.github.io/pandoc-toc-sidebar/css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 10px;} .sidebar{background-color: #dadada;}</style>
+    <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+          <!--<ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          </ul>-->
+          <ul>
+          <li><a href="#client-interview-questions"
+          id="toc-client-interview-questions">Client Interview
+          Questions</a>
+          <ul>
+          <li><a href="#general-questions"
+          id="toc-general-questions">General Questions</a></li>
+          <li><a href="#java-core-concepts"
+          id="toc-java-core-concepts">JAVA Core Concepts</a></li>
+          <li><a href="#collections-framework"
+          id="toc-collections-framework">Collections Framework</a></li>
+          <li><a href="#java-8-functional-programming"
+          id="toc-java-8-functional-programming">Java 8 &amp; Functional
+          Programming</a></li>
+          <li><a href="#coding-exercises"
+          id="toc-coding-exercises">Coding Exercises</a></li>
+          <li><a href="#multithreading-concurrency"
+          id="toc-multithreading-concurrency">Multithreading &amp;
+          Concurrency</a></li>
+          <li><a href="#garbage-collection-jvm"
+          id="toc-garbage-collection-jvm">Garbage Collection &amp;
+          JVM</a></li>
+          <li><a href="#design-patterns" id="toc-design-patterns">Design
+          Patterns</a></li>
+          <li><a href="#spring-framework-spring-boot"
+          id="toc-spring-framework-spring-boot">Spring Framework &amp;
+          Spring Boot</a></li>
+          <li><a href="#spring-security-jwt"
+          id="toc-spring-security-jwt">Spring Security &amp;
+          JWT</a></li>
+          <li><a href="#microservices-architecture"
+          id="toc-microservices-architecture">Microservices
+          Architecture</a></li>
+          <li><a href="#database-sql" id="toc-database-sql">Database
+          &amp; SQL</a></li>
+          <li><a href="#redis-caching" id="toc-redis-caching">Redis
+          &amp; Caching</a></li>
+          <li><a href="#performance-troubleshooting"
+          id="toc-performance-troubleshooting">Performance &amp;
+          Troubleshooting</a></li>
+          <li><a href="#system-design" id="toc-system-design">System
+          Design</a></li>
+          <li><a href="#production-support-ownership"
+          id="toc-production-support-ownership">Production Support &amp;
+          Ownership</a></li>
+          </ul></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        
+<h1 id="client-interview-questions">Client Interview Questions</h1>
+<h2 id="general-questions">General Questions</h2>
+<p><strong>1. Tell me about yourself.</strong> I’m a backend Java
+developer with 6 years of experience, currently a Senior Associate at
+PwC India working on insurance platform backends using Java, Spring
+Boot, JPA, and PostgreSQL. Before this, I worked at TCS on SBI Card’s
+credit card origination system. Alongside backend work, I’ve picked up
+DevOps skills — Jenkins, Docker, Azure VM deployments — and I also build
+Angular frontends when needed. I’m B.Tech in ECE from MAKAUT.</p>
+<p><strong>2. Explain your roles and responsibilities.</strong> At PwC,
+I build and maintain backend services for an insurance platform (Java,
+Spring Boot, JPA, Microservices, Feign Client), and I also built a
+Recruitment Tracking system end-to-end using Spring Security and MSSQL.
+At TCS, I worked on SBI Card’s Sales24 platform — fixing production
+bugs, building new features, and automating manual processes like
+source-code mapping (cut effort by 95%) using Angular.</p>
+<p><strong>3. Explain your Internet Banking project.</strong> This maps
+closely to my SBI Card Sales24 work — the credit card origination
+journey: customer onboarding, CIBIL score check, digital KYC, and card
+issuance, built with Java, Spring Boot, JPA, Hibernate, and REST
+microservices.</p>
+<p><strong>4. What architecture did you use?</strong> Microservices
+architecture — separate services per business capability (e.g., order,
+payment), communicating via REST/Feign Client, with each service owning
+its own database.</p>
+<p><strong>5. Did you use Spring Boot and Microservices?</strong> Yes —
+Spring Boot for the services themselves, and a microservices
+architecture with components like Eureka (service discovery), API
+Gateway, and Feign Client for inter-service calls (used in my AI Fitness
+App and insurance platform).</p>
+<p><strong>6. Did you use JWT?</strong> Yes — in my Todoify project, I
+implemented JWT-based authentication with Spring Security, where a
+logged-in user’s token is validated on every request via a custom
+filter.</p>
+<hr />
+<h2 id="java-core-concepts">JAVA Core Concepts</h2>
+<p><strong>7. Difference between JVM, JDK, and JRE.</strong></p>
+<ul>
+<li>JVM = runtime engine that executes bytecode.</li>
+<li>JRE = JVM + libraries needed to run Java apps.</li>
+<li>JDK = JRE + development tools (compiler, debugger).</li>
+<li>Formula: <code>JDK = JRE + dev tools</code>,
+<code>JRE = JVM + libraries</code>.</li>
+<li><strong>Simple analogy:</strong> JVM = engine, JRE = Car (engine +
+fuel), JDK = full car factory (JRE + tools to build).</li>
+</ul>
+<p><strong>8. Difference between == and equals().</strong></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">String</span><span class="op">(</span><span class="st">&quot;hello&quot;</span><span class="op">);</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s2 <span class="op">=</span> <span class="kw">new</span> <span class="bu">String</span><span class="op">(</span><span class="st">&quot;hello&quot;</span><span class="op">);</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>s1 <span class="op">==</span> s2<span class="op">);</span>       <span class="co">// false — compares references</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>s1<span class="op">.</span><span class="fu">equals</span><span class="op">(</span>s2<span class="op">));</span>  <span class="co">// true — compares content</span></span></code></pre></div>
+<p><code>==</code> compares memory references (object identity);
+<code>equals()</code> compares actual content (when overridden, like in
+<code>String</code>).</p>
+<p>For plain <code>Object</code>, <code>equals()</code> defaults to
+<code>==</code> unless overridden. <code>String</code> overrides
+<code>equals()</code> to compare content.</p>
+<p><strong>9. String Pool.</strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> a <span class="op">=</span> <span class="st">&quot;hello&quot;</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> b <span class="op">=</span> <span class="st">&quot;hello&quot;</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>a <span class="op">==</span> b<span class="op">);</span> <span class="co">// true — both point to same pooled object</span></span></code></pre></div>
+<p>Java caches string literals in a special memory area (String Constant
+Pool) — identical literals reuse the same object instead of creating
+duplicates, saving memory.</p>
+<p><strong>10. String, StringBuilder, and StringBuffer.</strong></p>
+<ul>
+<li><code>String</code> is immutable — every modification creates a new
+object.</li>
+<li><code>StringBuilder</code> is mutable and fast but not
+thread-safe.</li>
+<li><code>StringBuffer</code> is mutable and thread-safe (synchronized)
+but slower.</li>
+<li>I use <code>StringBuilder</code> by default,
+<code>StringBuffer</code> only when multiple threads modify the same
+instance.</li>
+</ul>
+<p><strong>11. <code>ABC abc = new ABC();</code> — stack memory and Java
+memory management.</strong> <code>abc</code> (the reference variable)
+lives on the <strong>stack</strong>. The actual <code>ABC</code> object
+lives on the <strong>heap</strong>. The stack variable just holds the
+memory address pointing to the heap object. When <code>abc</code> goes
+out of scope, the stack reference is removed, and the heap object
+becomes eligible for garbage collection if nothing else references
+it.</p>
+<p><strong>12. Constructor.</strong> A special method matching the class
+name, with no return type, called automatically when an object is
+created via <code>new</code> — used to initialize the object’s
+state.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Employee <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> name<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Employee</span><span class="op">(</span><span class="bu">String</span> name<span class="op">)</span> <span class="op">{</span> <span class="kw">this</span><span class="op">.</span><span class="fu">name</span> <span class="op">=</span> name<span class="op">;</span> <span class="op">}</span> <span class="co">// constructor</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong>13. Wrapper class.</strong> A class that wraps a primitive
+type into an object — e.g., <code>int → Integer</code>,
+<code>double → Double</code>. Needed because Collections (List, Map) can
+only store objects, not primitives.</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i <span class="op">=</span> <span class="dv">10</span><span class="op">;</span> <span class="co">// autoboxing: int → Integer</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> j <span class="op">=</span> i<span class="op">;</span>      <span class="co">// unboxing: Integer → int</span></span></code></pre></div>
+<p><strong>14. static keyword and block.</strong> <code>static</code>
+members belong to the class, not an instance — shared across all
+objects. A <strong>static block</strong> runs once when the class is
+loaded, before <code>main()</code>, useful for one-time static
+initialization.</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Config <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">int</span> version<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="op">{</span> version <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Static block executed&quot;</span><span class="op">);</span> <span class="op">}</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Output (on first access to Config class): Static block executed</span></span></code></pre></div>
+<p><strong>15. Aggregation vs Association.</strong>
+<strong>Association</strong> = a general relationship between two
+independent classes (e.g., <code>Teacher</code> and
+<code>Student</code>, both can exist without each other).
+<strong>Aggregation</strong> = a special “has-a” association where one
+object contains a reference to another, but the contained object can
+still exist independently (e.g., <code>Department</code> has
+<code>Employee</code>s, but an <code>Employee</code> can exist without
+that <code>Department</code>).</p>
+<hr />
+<h2 id="collections-framework">Collections Framework</h2>
+<p><strong>16. Collections used in your project.</strong></p>
+<ul>
+<li><code>List</code> (ArrayList) for ordered API response data,</li>
+<li><code>Map</code> (HashMap) for quick lookups,</li>
+<li><code>Set</code> for uniqueness checks (e.g., deduplicating IDs),
+and</li>
+<li>Spring Data’s <code>Page</code>/<code>Pageable</code> for paginated
+results.</li>
+</ul>
+<p><strong>17. Collections — ArrayList, HashMap, HashSet,
+ConcurrentHashMap, TreeMap, LinkedHashMap.</strong> -
+<code>ArrayList</code> = fast random access, dynamic array. -
+<code>HashMap</code> = key-value, no order, fast lookup. -
+<code>HashSet</code> = unique elements, no order (backed by HashMap). -
+<code>ConcurrentHashMap</code> = thread-safe HashMap for concurrent
+access. - <code>TreeMap</code> = key-value, sorted by key. -
+<code>LinkedHashMap</code> = key-value, preserves insertion order.</p>
+<p><strong>18. HashSet vs ConcurrentHashMap.</strong>
+<code>HashSet</code> stores unique elements, not thread-safe, backed
+internally by a <code>HashMap</code>. <code>ConcurrentHashMap</code> is
+a thread-safe <strong>Map</strong> (key-value), using
+segment/bucket-level locking so multiple threads can read/write
+concurrently without locking the whole map.</p>
+<p><strong>19. Load Factor in HashMap.</strong> Default is 0.75 — when
+the map is 75% full (based on capacity), it automatically resizes
+(doubles) to reduce collisions and maintain O(1) performance. Default
+initial capacity is 16.</p>
+<p><strong>20. Which collection preserves insertion order?</strong>
+<code>LinkedHashSet</code> and <code>LinkedHashMap</code> — they use an
+internal linked list alongside hashing to remember insertion order,
+unlike plain <code>HashSet</code>/<code>HashMap</code>.</p>
+<p><strong>21. Best collection for sorting.</strong>
+<code>TreeSet</code> (unique + sorted) or <code>TreeMap</code>
+(key-value + sorted by key) — both backed by a Red-Black Tree, giving
+natural ascending order automatically with O(log n) operations.</p>
+<p><strong>22. HashMap internal working.</strong> Uses an array of
+buckets; each key’s <code>hashCode()</code> determines its bucket index.
+Values with the same bucket (hash collision) form a linked list (or a
+red-black tree if the bucket grows large, Java 8+). On
+<code>get()</code>, it computes the hash, jumps to the bucket, then
+checks <code>equals()</code> to find the exact match.</p>
+<p><strong>23. hashCode/equals contract, breaking it, fixed hashCode
+effect.</strong> Contract: equal objects <strong>must</strong> have
+equal hashCodes. Breaking it (e.g., overriding <code>equals()</code> but
+not <code>hashCode()</code>) causes
+<code>HashMap</code>/<code>HashSet</code> to treat logically equal
+objects as different, so lookups fail. If <code>hashCode()</code> always
+returns the same fixed value, <strong>all keys land in one
+bucket</strong> — the map degrades to a linked list, turning O(1)
+operations into O(n).</p>
+<p><strong>24. Concurrent collections internal working.</strong>
+<code>ConcurrentHashMap</code> uses fine-grained locking (bucket/segment
+level in older versions, CAS + synchronized blocks per bin in Java 8+)
+so multiple threads can read/write different parts concurrently.
+<code>CopyOnWriteArrayList</code> creates a <strong>new copy of the
+entire array</strong> on every write, so reads never block — good for
+read-heavy, rarely-written lists.</p>
+<hr />
+<h2 id="java-8-functional-programming">Java 8 &amp; Functional
+Programming</h2>
+<p><strong>25. Stream API to map Employee to Employee Name.</strong></p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">List</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> names <span class="op">=</span> employees<span class="op">.</span><span class="fu">stream</span><span class="op">()</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">map</span><span class="op">(</span>Employee<span class="op">::</span>getName<span class="op">)</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">collect</span><span class="op">(</span>Collectors<span class="op">.</span><span class="fu">toList</span><span class="op">());</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>names<span class="op">);</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Output: [John, Jane, Bob]</span></span></code></pre></div>
+<p><strong>26. Method Reference (::) vs Lambda.</strong></p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>list<span class="op">.</span><span class="fu">forEach</span><span class="op">(</span>e <span class="op">-&gt;</span> <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>e<span class="op">));</span>   <span class="co">// lambda</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>list<span class="op">.</span><span class="fu">forEach</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">::</span>println<span class="op">);</span>          <span class="co">// method reference — same result, cleaner</span></span></code></pre></div>
+<p>Method reference is shorthand for a lambda that just calls an
+existing method — same behavior, more readable when no extra logic is
+needed.</p>
+<p><strong>27. Java Stream — filter, map, flatMap, sorting, Comparator,
+groupBy, collect.</strong></p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">List</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> names <span class="op">=</span> employees<span class="op">.</span><span class="fu">stream</span><span class="op">()</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filter</span><span class="op">(</span>e <span class="op">-&gt;</span> e<span class="op">.</span><span class="fu">getSalary</span><span class="op">()</span> <span class="op">&gt;</span> <span class="dv">50000</span><span class="op">)</span>                      <span class="co">// keep matching elements</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">map</span><span class="op">(</span>Employee<span class="op">::</span>getName<span class="op">)</span>                                   <span class="co">// transform each element</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">sorted</span><span class="op">(</span><span class="bu">Comparator</span><span class="op">.</span><span class="fu">naturalOrder</span><span class="op">())</span>                        <span class="co">// sort</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">collect</span><span class="op">(</span>Collectors<span class="op">.</span><span class="fu">toList</span><span class="op">());</span>                            <span class="co">// terminal operation → List</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">List</span><span class="op">&lt;</span>Employee<span class="op">&gt;&gt;</span> byDept <span class="op">=</span> employees<span class="op">.</span><span class="fu">stream</span><span class="op">()</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">collect</span><span class="op">(</span>Collectors<span class="op">.</span><span class="fu">groupingBy</span><span class="op">(</span>Employee<span class="op">::</span>getDepartment<span class="op">));</span> <span class="co">// group by a key</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="bu">List</span><span class="op">&lt;</span><span class="bu">Integer</span><span class="op">&gt;</span> flat <span class="op">=</span> <span class="bu">List</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="bu">List</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">),</span> <span class="bu">List</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="dv">3</span><span class="op">,</span><span class="dv">4</span><span class="op">)).</span><span class="fu">stream</span><span class="op">()</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">flatMap</span><span class="op">(</span><span class="bu">List</span><span class="op">::</span>stream<span class="op">)</span>   <span class="co">// flattens nested lists into one stream</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">collect</span><span class="op">(</span>Collectors<span class="op">.</span><span class="fu">toList</span><span class="op">());</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>flat<span class="op">);</span> <span class="co">// Output: [1, 2, 3, 4]</span></span></code></pre></div>
+<p><strong>28. Department-wise Top 3 Highest Salaries using Stream
+API.</strong></p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">List</span><span class="op">&lt;</span>Employee<span class="op">&gt;&gt;</span> top3ByDept <span class="op">=</span> employees<span class="op">.</span><span class="fu">stream</span><span class="op">()</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">collect</span><span class="op">(</span>Collectors<span class="op">.</span><span class="fu">groupingBy</span><span class="op">(</span>Employee<span class="op">::</span>getDepartment<span class="op">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        Collectors<span class="op">.</span><span class="fu">collectingAndThen</span><span class="op">(</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>            Collectors<span class="op">.</span><span class="fu">toList</span><span class="op">(),</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>            list <span class="op">-&gt;</span> list<span class="op">.</span><span class="fu">stream</span><span class="op">()</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">sorted</span><span class="op">(</span><span class="bu">Comparator</span><span class="op">.</span><span class="fu">comparing</span><span class="op">(</span>Employee<span class="op">::</span>getSalary<span class="op">).</span><span class="fu">reversed</span><span class="op">())</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">limit</span><span class="op">(</span><span class="dv">3</span><span class="op">)</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">collect</span><span class="op">(</span>Collectors<span class="op">.</span><span class="fu">toList</span><span class="op">())</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">)));</span></span></code></pre></div>
+<p>Groups employees by department, then within each group sorts by
+salary descending and keeps top 3.</p>
+<hr />
+<h2 id="coding-exercises">Coding Exercises</h2>
+<p><strong>29. Reverse words in a string.</strong></p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> input <span class="op">=</span> <span class="st">&quot;backend java developer&quot;</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span><span class="op">[]</span> words <span class="op">=</span> input<span class="op">.</span><span class="fu">split</span><span class="op">(</span><span class="st">&quot; &quot;</span><span class="op">);</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Collections</span><span class="op">.</span><span class="fu">reverse</span><span class="op">(</span><span class="bu">Arrays</span><span class="op">.</span><span class="fu">asList</span><span class="op">(</span>words<span class="op">));</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> result <span class="op">=</span> <span class="bu">String</span><span class="op">.</span><span class="fu">join</span><span class="op">(</span><span class="st">&quot; &quot;</span><span class="op">,</span> words<span class="op">);</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>result<span class="op">);</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">// Output: developer java backend</span></span></code></pre></div>
+<p><strong>30. Time and Space Complexity.</strong> Time complexity = how
+execution time grows with input size (e.g., O(n) for a loop, O(log n)
+for binary search). Space complexity = how much extra memory an
+algorithm uses relative to input size. Used to compare algorithm
+efficiency independent of hardware.</p>
+<p><strong>31. First non-repeating character index.</strong></p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">int</span> <span class="fu">firstNonRepeating</span><span class="op">(</span><span class="bu">String</span> s<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">Character</span><span class="op">,</span> <span class="bu">Integer</span><span class="op">&gt;</span> count <span class="op">=</span> <span class="kw">new</span> <span class="bu">LinkedHashMap</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">char</span> c <span class="op">:</span> s<span class="op">.</span><span class="fu">toCharArray</span><span class="op">())</span> count<span class="op">.</span><span class="fu">merge</span><span class="op">(</span>c<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="bu">Integer</span><span class="op">::</span>sum<span class="op">);</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> s<span class="op">.</span><span class="fu">length</span><span class="op">();</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>count<span class="op">.</span><span class="fu">get</span><span class="op">(</span>s<span class="op">.</span><span class="fu">charAt</span><span class="op">(</span>i<span class="op">))</span> <span class="op">==</span> <span class="dv">1</span><span class="op">)</span> <span class="cf">return</span> i<span class="op">;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="fu">firstNonRepeating</span><span class="op">(</span><span class="st">&quot;abcdbaf&quot;</span><span class="op">));</span> <span class="co">// Output: 2</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="fu">firstNonRepeating</span><span class="op">(</span><span class="st">&quot;abcjhg&quot;</span><span class="op">));</span>  <span class="co">// Output: -1</span></span></code></pre></div>
+<hr />
+<h2 id="multithreading-concurrency">Multithreading &amp;
+Concurrency</h2>
+<p><strong>32. Multithreading.</strong> Running multiple threads
+concurrently within a single program, sharing the same memory space
+(unlike processes), allowing tasks to execute in parallel and better
+utilize CPU cores.</p>
+<p><strong>33. How to create a thread.</strong></p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Way 1: extend Thread</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyThread <span class="kw">extends</span> <span class="bu">Thread</span> <span class="op">{</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">run</span><span class="op">()</span> <span class="op">{</span> <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Running&quot;</span><span class="op">);</span> <span class="op">}</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="fu">MyThread</span><span class="op">().</span><span class="fu">start</span><span class="op">();</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Way 2: implement Runnable (preferred)</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="bu">Runnable</span> task <span class="op">=</span> <span class="op">()</span> <span class="op">-&gt;</span> <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Running via Runnable&quot;</span><span class="op">);</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="bu">Thread</span><span class="op">(</span>task<span class="op">).</span><span class="fu">start</span><span class="op">();</span></span></code></pre></div>
+<p><strong>34. ExecutorService.</strong></p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">ExecutorService</span> executor <span class="op">=</span> <span class="bu">Executors</span><span class="op">.</span><span class="fu">newFixedThreadPool</span><span class="op">(</span><span class="dv">4</span><span class="op">);</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>executor<span class="op">.</span><span class="fu">submit</span><span class="op">(()</span> <span class="op">-&gt;</span> <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Task running&quot;</span><span class="op">));</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>executor<span class="op">.</span><span class="fu">shutdown</span><span class="op">();</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Output: Task running</span></span></code></pre></div>
+<p>Manages a pool of reusable threads so you don’t manually
+create/destroy threads for every task — reduces overhead and resource
+thrashing.</p>
+<p><strong>35. Callable vs Future vs CompletableFuture.</strong>
+<code>Callable</code> = a task that returns a result
+(<code>V call()</code>). <code>Future</code> = a placeholder for a
+result that will be ready later (<code>.get()</code> blocks until done).
+<code>CompletableFuture</code> = an enhanced <code>Future</code> that
+supports chaining callbacks (<code>.thenApply()</code>) without
+blocking.</p>
+<p><strong>36. When would you use CompletableFuture?</strong> When I
+need to run multiple independent tasks in parallel and combine their
+results — e.g., calling 3 different microservices simultaneously instead
+of sequentially, then merging responses once all complete.</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>CompletableFuture<span class="op">&lt;</span><span class="bu">Integer</span><span class="op">&gt;</span> future <span class="op">=</span> CompletableFuture<span class="op">.</span><span class="fu">supplyAsync</span><span class="op">(()</span> <span class="op">-&gt;</span> <span class="dv">10</span> <span class="op">+</span> <span class="dv">20</span><span class="op">,</span> executor<span class="op">)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">thenApply</span><span class="op">(</span>result <span class="op">-&gt;</span> result <span class="op">*</span> <span class="dv">2</span><span class="op">);</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>future<span class="op">.</span><span class="fu">get</span><span class="op">());</span> <span class="co">// Output: 60</span></span></code></pre></div>
+<p><strong>37. Class-level and method-level locking.</strong>
+<strong>Method-level</strong> (<code>synchronized</code> on an instance
+method) locks on <code>this</code> — only one thread can execute that
+method on that object at a time. <strong>Class-level</strong>
+(<code>synchronized</code> on a static method, or
+<code>synchronized(MyClass.class)</code>) locks on the Class object
+itself — affects all instances, since static methods aren’t tied to one
+object.</p>
+<p><strong>38. Two threads alternately printing odd and even numbers
+(1–100) using wait()/notify().</strong></p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Printer <span class="op">{</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> num <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> max <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">synchronized</span> <span class="dt">void</span> <span class="fu">printOdd</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="op">(</span>num <span class="op">&lt;=</span> max<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="op">(</span>num <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span> <span class="cf">try</span> <span class="op">{</span> <span class="fu">wait</span><span class="op">();</span> <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span><span class="bu">InterruptedException</span> e<span class="op">)</span> <span class="op">{}</span> <span class="op">}</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>            <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Odd: &quot;</span> <span class="op">+</span> num<span class="op">++);</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>            <span class="fu">notify</span><span class="op">();</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">synchronized</span> <span class="dt">void</span> <span class="fu">printEven</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="op">(</span>num <span class="op">&lt;=</span> max<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="op">(</span>num <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span> <span class="cf">try</span> <span class="op">{</span> <span class="fu">wait</span><span class="op">();</span> <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span><span class="bu">InterruptedException</span> e<span class="op">)</span> <span class="op">{}</span> <span class="op">}</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>            <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Even: &quot;</span> <span class="op">+</span> num<span class="op">++);</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>            <span class="fu">notify</span><span class="op">();</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>Printer p <span class="op">=</span> <span class="kw">new</span> <span class="fu">Printer</span><span class="op">();</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="bu">Thread</span><span class="op">(</span>p<span class="op">::</span>printOdd<span class="op">).</span><span class="fu">start</span><span class="op">();</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="bu">Thread</span><span class="op">(</span>p<span class="op">::</span>printEven<span class="op">).</span><span class="fu">start</span><span class="op">();</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="co">// Output: Odd: 1, Even: 2, Odd: 3, Even: 4 ... up to 100</span></span></code></pre></div>
+<hr />
+<h2 id="garbage-collection-jvm">Garbage Collection &amp; JVM</h2>
+<p><strong>39. Who performs Garbage Collection?</strong> The JVM —
+specifically, a background GC thread/process automatically reclaims
+memory occupied by objects no longer reachable from any live
+reference.</p>
+<p><strong>40. When does an object become eligible for Garbage
+Collection?</strong> When it has <strong>no live references</strong>
+pointing to it — e.g., a local variable going out of scope, or
+explicitly setting a reference to <code>null</code> with no other
+references remaining.</p>
+<p><strong>41. Can JVM run C/C++ code?</strong> Not directly — but via
+<strong>JNI (Java Native Interface)</strong>, Java code can call native
+C/C++ functions, and vice versa, bridging managed Java code with native
+libraries.</p>
+<hr />
+<h2 id="design-patterns">Design Patterns</h2>
+<p><strong>42. Thread-safe Singleton (enhanced — non-clonable,
+reflection-safe, serialization-safe).</strong></p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Singleton <span class="kw">implements</span> <span class="bu">Serializable</span> <span class="op">{</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="kw">volatile</span> Singleton instance<span class="op">;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="fu">Singleton</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>instance <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">RuntimeException</span><span class="op">(</span><span class="st">&quot;Use getInstance()&quot;</span><span class="op">);</span> <span class="co">// block reflection</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> Singleton <span class="fu">getInstance</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>instance <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>            <span class="kw">synchronized</span> <span class="op">(</span>Singleton<span class="op">.</span><span class="fu">class</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="op">(</span>instance <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> instance <span class="op">=</span> <span class="kw">new</span> <span class="fu">Singleton</span><span class="op">();</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> instance<span class="op">;</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="bu">Object</span> <span class="fu">readResolve</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> instance<span class="op">;</span> <span class="op">}</span> <span class="co">// block serialization creating new instance</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="bu">Object</span> <span class="fu">clone</span><span class="op">()</span> <span class="kw">throws</span> <span class="bu">CloneNotSupportedException</span> <span class="op">{</span> <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">CloneNotSupportedException</span><span class="op">();</span> <span class="op">}</span> <span class="co">// block cloning</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong>43. Design patterns — API Gateway, Circuit Breaker, Saga
+(orchestration vs choreography).</strong> <strong>API Gateway</strong> —
+single entry point routing to microservices. <strong>Circuit
+Breaker</strong> — stops calling a failing service after threshold
+breaches, uses fallback. <strong>Saga</strong> — distributed transaction
+pattern via local transactions + compensating events;
+<strong>Orchestration</strong> = a central coordinator tells each
+service what to do next; <strong>Choreography</strong> = services react
+to each other’s events independently, no central controller.
+<strong>Singleton</strong> can be broken via reflection
+(<code>setAccessible(true)</code>), cloning, or deserialization — each
+needs explicit guards (as shown in Q42).</p>
+<hr />
+<h2 id="spring-framework-spring-boot">Spring Framework &amp; Spring
+Boot</h2>
+<p><strong>44. Spring type of Dependency Injection and which is
+better.</strong> <strong>Constructor injection</strong> (preferred) —
+dependencies are immutable (<code>final</code>), makes required
+dependencies explicit, and works well with unit testing. <strong>Setter
+injection</strong> — optional dependencies, allows reconfiguration after
+construction. <strong>Field injection</strong> (<code>@Autowired</code>
+on the field) — discouraged, harder to test and hides dependencies.</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="at">@Service</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> OrderService <span class="op">{</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> PaymentService paymentService<span class="op">;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">OrderService</span><span class="op">(</span>PaymentService paymentService<span class="op">)</span> <span class="op">{</span> <span class="co">// constructor injection — preferred</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">paymentService</span> <span class="op">=</span> paymentService<span class="op">;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Bean scope: default is <code>singleton</code> (one shared instance);
+use <code>prototype</code> for a new instance per request.</p>
+<p><strong>45. <span class="citation"
+data-cites="Configuration">@Configuration</span>.</strong></p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="at">@Configuration</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> AppConfig <span class="op">{</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Bean</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PasswordEncoder <span class="fu">passwordEncoder</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> <span class="kw">new</span> <span class="fu">BCryptPasswordEncoder</span><span class="op">();</span> <span class="op">}</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Marks a class as a source of bean definitions for the Spring IoC
+container.</p>
+<p><strong>46. Maven dependencies/annotations, build lifecycle, package
+vs install.</strong> Maven manages project dependencies and build steps
+via <code>pom.xml</code>. Lifecycle phases run in order:
+<code>validate → compile → test → package → install → deploy</code>.
+<strong><code>mvn package</code></strong> builds a JAR/WAR into the
+local <code>target/</code> folder.
+<strong><code>mvn install</code></strong> does that AND copies it into
+the local <code>.m2</code> repository so other local projects can depend
+on it.</p>
+<p><strong>47. Spring Boot CRUD project for an Employee
+Entity.</strong></p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="at">@Entity</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Employee <span class="op">{</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Id</span> <span class="at">@GeneratedValue</span> <span class="kw">private</span> <span class="bu">Long</span> id<span class="op">;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> name<span class="op">;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">double</span> salary<span class="op">;</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="at">@Repository</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="kw">interface</span> EmployeeRepo <span class="kw">extends</span> JpaRepository<span class="op">&lt;</span>Employee<span class="op">,</span> <span class="bu">Long</span><span class="op">&gt;</span> <span class="op">{}</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="at">@RestController</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="at">@RequestMapping</span><span class="op">(</span><span class="st">&quot;/employees&quot;</span><span class="op">)</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> EmployeeController <span class="op">{</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span> <span class="kw">private</span> EmployeeRepo repo<span class="op">;</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">@PostMapping</span> <span class="kw">public</span> Employee <span class="fu">create</span><span class="op">(</span><span class="at">@RequestBody</span> Employee e<span class="op">)</span> <span class="op">{</span> <span class="cf">return</span> repo<span class="op">.</span><span class="fu">save</span><span class="op">(</span>e<span class="op">);</span> <span class="op">}</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">@GetMapping</span> <span class="kw">public</span> <span class="bu">List</span><span class="op">&lt;</span>Employee<span class="op">&gt;</span> <span class="fu">getAll</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> repo<span class="op">.</span><span class="fu">findAll</span><span class="op">();</span> <span class="op">}</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">@GetMapping</span><span class="op">(</span><span class="st">&quot;/{id}&quot;</span><span class="op">)</span> <span class="kw">public</span> Employee <span class="fu">getOne</span><span class="op">(</span><span class="at">@PathVariable</span> <span class="bu">Long</span> id<span class="op">)</span> <span class="op">{</span> <span class="cf">return</span> repo<span class="op">.</span><span class="fu">findById</span><span class="op">(</span>id<span class="op">).</span><span class="fu">orElseThrow</span><span class="op">();</span> <span class="op">}</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">@PutMapping</span><span class="op">(</span><span class="st">&quot;/{id}&quot;</span><span class="op">)</span> <span class="kw">public</span> Employee <span class="fu">update</span><span class="op">(</span><span class="at">@PathVariable</span> <span class="bu">Long</span> id<span class="op">,</span> <span class="at">@RequestBody</span> Employee e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>        e<span class="op">.</span><span class="fu">setId</span><span class="op">(</span>id<span class="op">);</span> <span class="cf">return</span> repo<span class="op">.</span><span class="fu">save</span><span class="op">(</span>e<span class="op">);</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">@DeleteMapping</span><span class="op">(</span><span class="st">&quot;/{id}&quot;</span><span class="op">)</span> <span class="kw">public</span> <span class="dt">void</span> <span class="fu">delete</span><span class="op">(</span><span class="at">@PathVariable</span> <span class="bu">Long</span> id<span class="op">)</span> <span class="op">{</span> repo<span class="op">.</span><span class="fu">deleteById</span><span class="op">(</span>id<span class="op">);</span> <span class="op">}</span></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong>48. Difference between CRUD and JPA Repository.</strong>
+<code>CrudRepository</code> provides basic operations (save, findById,
+delete). <code>JpaRepository</code> extends it plus adds pagination,
+sorting, and batch operations (<code>flush()</code>,
+<code>deleteInBatch()</code>) — use <code>JpaRepository</code> when you
+need those extras.</p>
+<p><strong>49. Implement pagination and sorting for
+/getAllEmployees.</strong></p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="at">@GetMapping</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> Page<span class="op">&lt;</span>Employee<span class="op">&gt;</span> <span class="fu">getAllEmployees</span><span class="op">(</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">@RequestParam</span> <span class="dt">int</span> page<span class="op">,</span> <span class="at">@RequestParam</span> <span class="dt">int</span> size<span class="op">,</span> <span class="at">@RequestParam</span> <span class="bu">String</span> sortBy<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> repo<span class="op">.</span><span class="fu">findAll</span><span class="op">(</span>PageRequest<span class="op">.</span><span class="fu">of</span><span class="op">(</span>page<span class="op">,</span> size<span class="op">,</span> Sort<span class="op">.</span><span class="fu">by</span><span class="op">(</span>sortBy<span class="op">)));</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co">// GET /employees?page=0&amp;size=10&amp;sortBy=salary</span></span></code></pre></div>
+<p><strong>50. Global exception handling using <span class="citation"
+data-cites="ControllerAdvice">@ControllerAdvice</span>.</strong></p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="at">@RestControllerAdvice</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> GlobalExceptionHandler <span class="op">{</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">@ExceptionHandler</span><span class="op">(</span>EmployeeNotFoundException<span class="op">.</span><span class="fu">class</span><span class="op">)</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">@ResponseStatus</span><span class="op">(</span>HttpStatus<span class="op">.</span><span class="fu">NOT_FOUND</span><span class="op">)</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">String</span><span class="op">&gt;</span> <span class="fu">handleNotFound</span><span class="op">(</span>EmployeeNotFoundException ex<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">Map</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="st">&quot;error&quot;</span><span class="op">,</span> ex<span class="op">.</span><span class="fu">getMessage</span><span class="op">());</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co">// Output: 404 { &quot;error&quot;: &quot;Employee not found&quot; }</span></span></code></pre></div>
+<p><strong>51. Distributed transactions and <span class="citation"
+data-cites="Transactional">@Transactional</span> scopes.</strong> Since
+a single <code>@Transactional</code> only covers one local DB
+transaction, distributed transactions across services use the
+<strong>Saga pattern</strong> — each service commits locally and
+publishes an event; failures trigger compensating actions instead of a
+single rollback across services.</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="at">@Transactional</span><span class="op">(</span>propagation <span class="op">=</span> Propagation<span class="op">.</span><span class="fu">REQUIRES_NEW</span><span class="op">)</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">processPayment</span><span class="op">()</span> <span class="op">{</span> <span class="kw">...</span> <span class="op">}</span> <span class="co">// always runs in its own separate transaction</span></span></code></pre></div>
+<p><strong>52. Exception handling and propagation into
+inheritance.</strong> If a parent method declares a checked exception,
+an overriding subclass method <strong>cannot throw a broader checked
+exception</strong> (can throw the same, a subclass of it, or none) —
+this preserves the parent’s contract for callers. Unchecked exceptions
+have no such restriction.</p>
+<hr />
+<h2 id="spring-security-jwt">Spring Security &amp; JWT</h2>
+<p><strong>53. OncePerRequestFilter.</strong></p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> JwtFilter <span class="kw">extends</span> OncePerRequestFilter <span class="op">{</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">doFilterInternal</span><span class="op">(</span>HttpServletRequest req<span class="op">,</span> HttpServletResponse res<span class="op">,</span> FilterChain chain<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">// validate JWT here</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>        chain<span class="op">.</span><span class="fu">doFilter</span><span class="op">(</span>req<span class="op">,</span> res<span class="op">);</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>A Spring base class guaranteeing a filter executes <strong>exactly
+once per request</strong>, even in complex dispatch scenarios (like
+forwards/includes) where a normal filter might run multiple times.</p>
+<p><strong>54. Why multiple filters?</strong> Each filter handles one
+concern — e.g., one validates JWT, another logs requests, another
+handles CORS. This keeps responsibilities separated (single
+responsibility) instead of one giant filter doing everything.</p>
+<p><strong>55. Custom filter vs Spring Security filter.</strong> Spring
+Security’s built-in filters (like
+<code>UsernamePasswordAuthenticationFilter</code>) handle standard login
+flows. A custom filter (like my <code>JwtFilter</code>) is added into
+that chain to handle something Spring doesn’t provide out of the box —
+like validating a JWT on every request.</p>
+<p><strong>56. UsernamePasswordAuthenticationFilter.</strong> A built-in
+Spring Security filter that intercepts login requests
+(username/password), authenticates via
+<code>AuthenticationManager</code>, and on success, sets the
+authenticated user into <code>SecurityContextHolder</code>.</p>
+<p><strong>57. filterChain.doFilter()</strong></p>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>chain<span class="op">.</span><span class="fu">doFilter</span><span class="op">(</span>request<span class="op">,</span> response<span class="op">);</span> <span class="co">// passes control to the NEXT filter in the chain</span></span></code></pre></div>
+<p>Called at the end of a filter’s logic to continue the request down
+the filter chain — without it, the request stops there and never reaches
+the controller.</p>
+<p><strong>58. SecurityContextHolder.</strong></p>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>Authentication auth <span class="op">=</span> SecurityContextHolder<span class="op">.</span><span class="fu">getContext</span><span class="op">().</span><span class="fu">getAuthentication</span><span class="op">();</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> username <span class="op">=</span> auth<span class="op">.</span><span class="fu">getName</span><span class="op">();</span></span></code></pre></div>
+<p>Holds the currently authenticated user’s details for the duration of
+the request — any part of the app can retrieve “who is logged in right
+now” from it.</p>
+<p><strong>59. <span class="citation"
+data-cites="EnableWebSecurity">@EnableWebSecurity</span>.</strong>
+Activates Spring Security’s web security support and integrates it with
+Spring MVC — required to enable custom <code>SecurityFilterChain</code>
+configuration.</p>
+<p><strong>60. SecurityFilterChain.</strong></p>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="at">@Bean</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> SecurityFilterChain <span class="fu">filterChain</span><span class="op">(</span>HttpSecurity http<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    http<span class="op">.</span><span class="fu">authorizeHttpRequests</span><span class="op">(</span>auth <span class="op">-&gt;</span> auth</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">requestMatchers</span><span class="op">(</span><span class="st">&quot;/public/**&quot;</span><span class="op">).</span><span class="fu">permitAll</span><span class="op">()</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">anyRequest</span><span class="op">().</span><span class="fu">authenticated</span><span class="op">());</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> http<span class="op">.</span><span class="fu">build</span><span class="op">();</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Defines which URLs require authentication, which roles can access
+what, and how login/logout behaves.</p>
+<p><strong>61. Integrating Spring Security to secure
+endpoints.</strong></p>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="at">@Bean</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> SecurityFilterChain <span class="fu">filterChain</span><span class="op">(</span>HttpSecurity http<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    http<span class="op">.</span><span class="fu">csrf</span><span class="op">(</span>csrf <span class="op">-&gt;</span> csrf<span class="op">.</span><span class="fu">disable</span><span class="op">())</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">authorizeHttpRequests</span><span class="op">(</span>auth <span class="op">-&gt;</span> auth</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">requestMatchers</span><span class="op">(</span><span class="st">&quot;/employees/**&quot;</span><span class="op">).</span><span class="fu">authenticated</span><span class="op">()</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">anyRequest</span><span class="op">().</span><span class="fu">permitAll</span><span class="op">());</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> http<span class="op">.</span><span class="fu">build</span><span class="op">();</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong>62. Explain JWT flow.</strong></p>
+<ol type="1">
+<li>User logs in with credentials → server verifies and generates a
+JWT</li>
+<li>Client stores the JWT and sends it as
+<code>Authorization: Bearer &lt;token&gt;</code> on every request</li>
+<li>A filter on the server validates the token’s signature and expiry on
+each request — no server-side session needed (stateless).</li>
+</ol>
+<p><strong>63. First step in JWT validation.</strong> Verify the token’s
+<strong>signature</strong> using the secret/public key — if the
+signature doesn’t match, the token was tampered with or forged, and the
+request is rejected immediately before even checking expiry or
+claims.</p>
+<p><strong>64. Explain Spring Security flow.</strong> Request → Security
+Filter Chain (custom filters like JWT validation run here) →
+<code>AuthenticationManager</code> validates credentials → on success,
+user details stored in <code>SecurityContextHolder</code> → request
+proceeds to the controller if authorized.</p>
+<p><strong>65. Full JWT with role-based mapping.</strong></p>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Generate token with role claim</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> token <span class="op">=</span> Jwts<span class="op">.</span><span class="fu">builder</span><span class="op">()</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">setSubject</span><span class="op">(</span>username<span class="op">)</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">claim</span><span class="op">(</span><span class="st">&quot;role&quot;</span><span class="op">,</span> <span class="st">&quot;ADMIN&quot;</span><span class="op">)</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">setExpiration</span><span class="op">(</span><span class="kw">new</span> <span class="bu">Date</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">()</span> <span class="op">+</span> <span class="dv">900000</span><span class="op">))</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">signWith</span><span class="op">(</span>secretKey<span class="op">).</span><span class="fu">compact</span><span class="op">();</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co">// In JwtFilter — extract and set authority</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>Claims claims <span class="op">=</span> Jwts<span class="op">.</span><span class="fu">parserBuilder</span><span class="op">().</span><span class="fu">setSigningKey</span><span class="op">(</span>secretKey<span class="op">).</span><span class="fu">build</span><span class="op">().</span><span class="fu">parseClaimsJws</span><span class="op">(</span>token<span class="op">).</span><span class="fu">getBody</span><span class="op">();</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> role <span class="op">=</span> claims<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="st">&quot;role&quot;</span><span class="op">,</span> <span class="bu">String</span><span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="bu">List</span><span class="op">&lt;</span>GrantedAuthority<span class="op">&gt;</span> authorities <span class="op">=</span> <span class="bu">List</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="kw">new</span> <span class="fu">SimpleGrantedAuthority</span><span class="op">(</span><span class="st">&quot;ROLE_&quot;</span> <span class="op">+</span> role<span class="op">));</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>UsernamePasswordAuthenticationToken authToken <span class="op">=</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">new</span> <span class="fu">UsernamePasswordAuthenticationToken</span><span class="op">(</span>claims<span class="op">.</span><span class="fu">getSubject</span><span class="op">(),</span> <span class="kw">null</span><span class="op">,</span> authorities<span class="op">);</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>SecurityContextHolder<span class="op">.</span><span class="fu">getContext</span><span class="op">().</span><span class="fu">setAuthentication</span><span class="op">(</span>authToken<span class="op">);</span></span></code></pre></div>
+<p>Then use <code>@PreAuthorize("hasRole('ADMIN')")</code> on protected
+endpoints.</p>
+<p><strong>66. doFilter, jwtFilter, security config.</strong>
+<code>chain.doFilter()</code> passes the request to the next filter.
+<code>JwtFilter</code> (custom, <code>OncePerRequestFilter</code>)
+validates the token before the request reaches the controller.
+<code>SecurityConfig</code> (<code>@Configuration</code> +
+<code>SecurityFilterChain</code>) registers the filter into the chain
+via
+<code>http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)</code>.</p>
+<p><strong>67. Security filter, API filter validate method.</strong> The
+filter’s <code>doFilterInternal()</code> extracts the token from the
+<code>Authorization</code> header, verifies its signature and expiry,
+and if valid, sets authentication into
+<code>SecurityContextHolder</code> before calling
+<code>chain.doFilter()</code>. If invalid, it can short-circuit and
+return 401 without calling <code>doFilter()</code>.</p>
+<hr />
+<h2 id="microservices-architecture">Microservices Architecture</h2>
+<p><strong>68. Why Gateway?</strong> Provides a single entry point for
+clients — centralizes routing, authentication, rate limiting, and
+logging instead of duplicating this logic in every microservice.</p>
+<p><strong>69. Spring Cloud Gateway.</strong> A single entry point that
+routes incoming requests to the correct microservice, and can also
+handle cross-cutting concerns like authentication, rate limiting, and
+logging centrally instead of duplicating them in every service.</p>
+<p><strong>70. Authentication at Gateway vs Backend.</strong>
+Gateway-level auth validates the token once for every incoming request
+before it even reaches a microservice — reduces duplicate validation
+logic across services. Backend-level auth is for fine-grained,
+service-specific authorization (e.g., role checks for a specific
+action).</p>
+<p><strong>71. Why not implement JWT in every microservice?</strong>
+Duplicating JWT validation logic in every service means more code to
+maintain, inconsistent implementations, and more points of failure —
+centralizing it at the Gateway keeps it DRY and consistent.</p>
+<p><strong>72. What should Gateway handle?</strong> Authentication
+(token validation), routing, rate limiting, basic request logging, and
+CORS.</p>
+<p><strong>73. What should Backend handle?</strong> Authorization
+(fine-grained role/permission checks specific to that service’s business
+logic), the actual business logic, and data access.</p>
+<p><strong>74. RestTemplate.</strong></p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>User user <span class="op">=</span> restTemplate<span class="op">.</span><span class="fu">getForObject</span><span class="op">(</span><span class="st">&quot;http://user-service/users/1&quot;</span><span class="op">,</span> User<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span></code></pre></div>
+<p>A synchronous HTTP client used to call other services/APIs. It’s the
+traditional blocking option (now largely superseded by
+<code>WebClient</code>, but still common in existing codebases).</p>
+<p><strong>75. What is Circuit Breaker?</strong></p>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="at">@CircuitBreaker</span><span class="op">(</span>name <span class="op">=</span> <span class="st">&quot;paymentService&quot;</span><span class="op">,</span> fallbackMethod <span class="op">=</span> <span class="st">&quot;fallback&quot;</span><span class="op">)</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">String</span> <span class="fu">callPayment</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> restTemplate<span class="op">.</span><span class="fu">getForObject</span><span class="op">(</span>url<span class="op">,</span> <span class="bu">String</span><span class="op">.</span><span class="fu">class</span><span class="op">);</span> <span class="op">}</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">String</span> <span class="fu">fallback</span><span class="op">(</span><span class="bu">Exception</span> e<span class="op">)</span> <span class="op">{</span> <span class="cf">return</span> <span class="st">&quot;Service unavailable&quot;</span><span class="op">;</span> <span class="op">}</span></span></code></pre></div>
+<p>Stops repeatedly calling a failing service — after enough failures,
+it “opens” and short-circuits calls to a fallback instead of hammering
+the broken service, preventing cascading failures.</p>
+<p><strong>76. Retry vs Circuit Breaker.</strong> <strong>Retry</strong>
+= try the same failing call again (a few times), useful for
+transient/temporary glitches. <strong>Circuit Breaker</strong> = stops
+calling entirely after repeated failures, useful when a service is
+consistently down, to avoid wasting resources. Often used together —
+retry a few times, then circuit breaker kicks in if it keeps
+failing.</p>
+<hr />
+<h2 id="database-sql">Database &amp; SQL</h2>
+<p><strong>77. Explain the inner query.</strong></p>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>#  employees earning above <span class="kw">the</span> average salary.</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name <span class="kw">FROM</span> employees </span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> salary <span class="op">&gt;</span> (<span class="kw">SELECT</span> <span class="fu">AVG</span>(salary) <span class="kw">FROM</span> employees);</span></code></pre></div>
+<p><strong>78. What is PARTITION BY?</strong></p>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name, department, salary,</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">RANK</span>() <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> department <span class="kw">ORDER</span> <span class="kw">BY</span> salary <span class="kw">DESC</span>) <span class="kw">AS</span> rnk</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> employees;</span></code></pre></div>
+<p><code>PARTITION BY</code> divides rows into groups (like department
+here) so window functions (RANK, ROW_NUMBER) reset and calculate
+independently within each group, instead of across the whole table.</p>
+<p><strong>79. Difference between ROW_NUMBER(), RANK(), and
+DENSE_RANK().</strong></p>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Salaries: 100, 100, 90, 80</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ROW_NUMBER</span>()  <span class="co">-- 1, 2, 3, 4  (always unique, no ties)</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">RANK</span>()        <span class="co">-- 1, 1, 3, 4  (ties share rank, gap after tie)</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">DENSE_RANK</span>()  <span class="co">-- 1, 1, 2, 3  (ties share rank, NO gap after tie)</span></span></code></pre></div>
+<p><strong>80. Department-wise Top 3 Highest Salaries
+(SQL).</strong></p>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> (</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> name, department, salary,</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">DENSE_RANK</span>() <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> department <span class="kw">ORDER</span> <span class="kw">BY</span> salary <span class="kw">DESC</span>) <span class="kw">AS</span> rnk</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> employees</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>) t <span class="kw">WHERE</span> rnk <span class="op">&lt;=</span> <span class="dv">3</span>;</span></code></pre></div>
+<p><strong>81. Highest, 2nd highest salary.</strong></p>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Highest salary</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">MAX</span>(salary) <span class="kw">FROM</span> employees;</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- 2nd highest salary</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">MAX</span>(salary) <span class="kw">FROM</span> employees <span class="kw">WHERE</span> salary <span class="op">&lt;</span> (<span class="kw">SELECT</span> <span class="fu">MAX</span>(salary) <span class="kw">FROM</span> employees);</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co">-- Using DENSE_RANK (handles ties correctly)</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name, salary <span class="kw">FROM</span> (</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> name, salary, <span class="fu">DENSE_RANK</span>() <span class="kw">OVER</span> (<span class="kw">ORDER</span> <span class="kw">BY</span> salary <span class="kw">DESC</span>) <span class="kw">AS</span> rnk <span class="kw">FROM</span> employees</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>) t <span class="kw">WHERE</span> rnk <span class="op">=</span> <span class="dv">2</span>;</span></code></pre></div>
+<p><strong>82. SQL — grouping by, having, joins.</strong></p>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> department, <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> emp_count</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> employees</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> department</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="kw">HAVING</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="op">&gt;</span> <span class="dv">5</span>;   <span class="co">-- filters GROUPS, unlike WHERE which filters rows before grouping</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> e.name, d.name <span class="kw">FROM</span> employees e</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> departments d <span class="kw">ON</span> e.dept_id <span class="op">=</span> d.<span class="kw">id</span>;  <span class="co">-- INNER JOIN — only matching rows from both tables</span></span></code></pre></div>
+<p><strong>83. What is Table Scan?</strong> The DB engine reads every
+row in a table sequentially to find matches — happens when there’s no
+useful index for the query, making it slow on large tables. An “Index
+Seek” (using an index) is much faster.</p>
+<p><strong>84. Difference between Scan and Seek.</strong>
+<strong>Scan</strong> = DB reads the entire table/index row by row.
+<strong>Seek</strong> = DB uses an index’s tree structure to jump
+directly to matching rows. Seek is faster and used when a good index
+exists for the query’s <code>WHERE</code> clause.</p>
+<p><strong>85. What is an Index?</strong> A separate data structure
+(usually a B-Tree) storing sorted references to table rows for a
+specific column — speeds up lookups (like a book’s index) at the cost of
+extra storage and slightly slower writes (since the index must be
+updated too).</p>
+<p><strong>86. How do you identify a slow SQL query?</strong> Run
+<code>EXPLAIN ANALYZE</code> on the query to see the actual execution
+plan — check if it’s doing a full table scan instead of an index seek,
+look at estimated vs actual row counts, and check for missing indexes on
+filtered/joined columns.</p>
+<p><strong>87. How do you use EXPLAIN ANALYZE / Execution
+Plan?</strong></p>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">EXPLAIN</span> <span class="kw">ANALYZE</span> <span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> orders <span class="kw">WHERE</span> customer_id <span class="op">=</span> <span class="dv">101</span>;</span></code></pre></div>
+<p>It shows the actual query plan the DB used — whether it did an Index
+Scan or Seq Scan, actual execution time per step, and row counts —
+helping pinpoint exactly where a query is slow.</p>
+<p><strong>88. What if the database is slow?</strong> Check the query’s
+execution plan for missing indexes, check for lock contention/blocking
+queries, review connection pool size, and consider caching (Redis) for
+frequently read, rarely changed data.</p>
+<p><strong>89. How do you work with the DBA team?</strong> I share the
+slow query along with its execution plan, discuss whether an index
+change, query rewrite, or partitioning would help, and coordinate on
+production-safe timing for any schema changes (like adding indexes on
+large tables).</p>
+<p><strong>90. Dynamically switching between multiple databases per
+request.</strong> Use Spring’s
+<strong>AbstractRoutingDataSource</strong> — it picks the correct
+<code>DataSource</code> at runtime based on a key (e.g., a tenant ID
+from the request), set into a <code>ThreadLocal</code> before the query
+executes.</p>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> TenantRoutingDataSource <span class="kw">extends</span> AbstractRoutingDataSource <span class="op">{</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="bu">Object</span> <span class="fu">determineCurrentLookupKey</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> TenantContext<span class="op">.</span><span class="fu">getCurrentTenant</span><span class="op">();</span> <span class="co">// reads from ThreadLocal</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<hr />
+<h2 id="redis-caching">Redis &amp; Caching</h2>
+<p><strong>91. Redis.</strong> An in-memory key-value data store used
+for caching, session storage, rate limiting, and pub/sub messaging —
+extremely fast since data lives in memory rather than disk.</p>
+<p><strong>92. Why Redis?</strong> It’s an in-memory data store —
+extremely fast for caching frequently accessed data, storing
+sessions/tokens, or rate-limiting counters, reducing load on the primary
+database.</p>
+<p><strong>93. Redis for JWT?</strong> Yes — storing JWTs (or their
+metadata) in Redis lets you invalidate/blacklist a token before its
+natural expiry (e.g., on logout), which a stateless JWT alone can’t
+do.</p>
+<p><strong>94. Will 1 lakh JWT tokens be stored in Redis?</strong> Yes,
+easily — Redis is designed for millions of key-value pairs in memory; 1
+lakh (100,000) small JWT entries is a trivial load for it.</p>
+<p><strong>95. How do you fetch one JWT from Redis?</strong></p>
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> token <span class="op">=</span> redisTemplate<span class="op">.</span><span class="fu">opsForValue</span><span class="op">().</span><span class="fu">get</span><span class="op">(</span><span class="st">&quot;jwt:&quot;</span> <span class="op">+</span> userId<span class="op">);</span></span></code></pre></div>
+<p>Store with a key pattern like <code>jwt:&lt;userId&gt;</code>, then a
+direct <code>GET</code> by key — O(1) lookup.</p>
+<hr />
+<h2 id="performance-troubleshooting">Performance &amp;
+Troubleshooting</h2>
+<p><strong>96. API taking 15-20 seconds. How do you
+troubleshoot?</strong> Check application logs for where time is spent,
+use APM/tracing (like Jaeger) to see which downstream call/DB query is
+the bottleneck, check for N+1 query issues, thread pool exhaustion, or a
+slow third-party API call without a timeout.</p>
+<p><strong>97. What logs will you check?</strong> Application logs
+(exceptions, timing), access logs (request/response times), DB slow
+query logs, and distributed tracing logs (trace ID) if it’s a
+microservices call chain.</p>
+<p><strong>98. What if a third-party API is slow?</strong> Add a timeout
+so my service doesn’t hang indefinitely, wrap the call in a Circuit
+Breaker (Resilience4j) with a fallback, and consider caching the
+response if data doesn’t change often.</p>
+<p><strong>99. High CPU usage and slow response under heavy load —
+troubleshooting steps.</strong> Take a thread dump to find CPU-heavy or
+blocked threads, check for excessive garbage collection (via GC logs —
+could indicate memory pressure), review for inefficient
+loops/algorithms, check DB connection pool exhaustion, and use profiling
+tools (VisualVM, JFR) to pinpoint hot methods.</p>
+<p><strong>100. Securing inter-service communication.</strong> Use
+<strong>mutual TLS (mTLS)</strong> so services verify each other’s
+identity, or a service mesh (Istio) for automatic encryption between
+services. For authorization between services, use short-lived service
+tokens (client credentials OAuth2 flow) rather than passing user JWTs
+blindly downstream.</p>
+<hr />
+<h2 id="system-design">System Design</h2>
+<p><strong>101. Healthcare project system design,
+Elasticsearch.</strong> For a healthcare system, patient records,
+appointments, and prescriptions each become their own microservice with
+their own DB (respecting HIPAA-style data isolation).
+<strong>Elasticsearch</strong> would be used for fast full-text search —
+e.g., searching patient records or doctor notes by keyword — since
+relational DBs aren’t optimized for free-text search at scale.</p>
+<hr />
+<h2 id="production-support-ownership">Production Support &amp;
+Ownership</h2>
+<p><strong>102. Are you comfortable with production support?</strong>
+Yes — I’ve handled production bug fixes at TCS (ETQ, sync issues) and
+currently support the insurance platform at PwC.</p>
+<p><strong>103. Have you handled production incidents?</strong> Yes —
+analyzed and resolved multiple production bugs on SBI Card’s Sales24
+platform, working with logs and execution traces to identify root causes
+quickly.</p>
+<p><strong>104. Are you comfortable with late-night
+deployments?</strong> Yes — I understand production deployments
+sometimes need off-peak timing to minimize user impact, and I’m
+comfortable with that when required.</p>
+<p><strong>105. Are you comfortable taking ownership of a
+module?</strong> Yes — I built the Recruitment Tracking System and the
+User Source Code Mapping tool end-to-end, from requirements to
+deployment.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
+        
+        /* ajust the height when click the toc
+           the code is from https://github.com/twbs/bootstrap/issues/1768
+        */
+        var shiftWindow = function() { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+        
+        /*add Bootstrap styles to tables*/
+        var tables = document.getElementsByTagName("table");
+        for(var i = 0; i < tables.length; ++i){
+            tables[i].className += "table table-bordered table-hover";
+        }
+    </script>
+  </body>
+</html>
