@@ -1,3 +1,4 @@
+Spring Framework & Spring Boot
 # Demo Interview Questions
 
 ## General Questions
@@ -249,54 +250,7 @@ List<Integer> flat = List.of(List.of(1,2), List.of(3,4)).stream()
 System.out.println(flat); // Output: [1, 2, 3, 4]
 ```
 
-**28. Department-wise Top 3 Highest Salaries using Stream API.**
 
-```java
-Map<String, List<Employee>> top3ByDept = employees.stream()
-    .collect(Collectors.groupingBy(Employee::getDepartment,
-        Collectors.collectingAndThen(
-            Collectors.toList(),
-            list -> list.stream()
-                .sorted(Comparator.comparing(Employee::getSalary).reversed())
-                .limit(3)
-                .collect(Collectors.toList())
-        )));
-```
-
-Groups employees by department, then within each group sorts by salary descending and keeps top 3.
-
----
-
-## Coding Exercises
-
-**29. Reverse words in a string.**
-
-```java
-String input = "backend java developer";
-String[] words = input.split(" ");
-Collections.reverse(Arrays.asList(words));
-String result = String.join(" ", words);
-System.out.println(result);
-// Output: developer java backend
-```
-
-**30. Time and Space Complexity.**
-Time complexity = how execution time grows with input size (e.g., O(n) for a loop, O(log n) for binary search). Space complexity = how much extra memory an algorithm uses relative to input size. Used to compare algorithm efficiency independent of hardware.
-
-**31. First non-repeating character index.**
-
-```java
-public static int firstNonRepeating(String s) {
-    Map<Character, Integer> count = new LinkedHashMap<>();
-    for (char c : s.toCharArray()) count.merge(c, 1, Integer::sum);
-    for (int i = 0; i < s.length(); i++) {
-        if (count.get(s.charAt(i)) == 1) return i;
-    }
-    return -1;
-}
-System.out.println(firstNonRepeating("abcdbaf")); // Output: 2
-System.out.println(firstNonRepeating("abcjhg"));  // Output: -1
-```
 
 ---
 
@@ -347,32 +301,9 @@ System.out.println(future.get());	 // Output: 60
 **37. Class-level and method-level locking.**
 **Method-level** (`synchronized` on an instance method) locks on `this` — only one thread can execute that method on that object at a time. **Class-level** (`synchronized` on a static method, or `synchronized(MyClass.class)`) locks on the Class object itself — affects all instances, since static methods aren't tied to one object.
 
-**38. Two threads alternately printing odd and even numbers (1–100) using wait()/notify().**
 
-```java
-class Printer {
-    private int num = 1;
-    private final int max = 100;
-    synchronized void printOdd() {
-        while (num <= max) {
-            while (num % 2 == 0) { try { wait(); } catch (InterruptedException e) {} }
-            System.out.println("Odd: " + num++);
-            notify();
-        }
-    }
-    synchronized void printEven() {
-        while (num <= max) {
-            while (num % 2 != 0) { try { wait(); } catch (InterruptedException e) {} }
-            System.out.println("Even: " + num++);
-            notify();
-        }
-    }
-}
-Printer p = new Printer();
-new Thread(p::printOdd).start();
-new Thread(p::printEven).start();
-// Output: Odd: 1, Even: 2, Odd: 3, Even: 4 ... up to 100
-```
+
+
 
 ---
 
@@ -426,28 +357,8 @@ public class Singleton implements Serializable {
 
 ## Spring Framework & Spring Boot
 
-**44. Spring type of Dependency Injection and which is better.**
 
-- **Constructor injection** (preferred) — dependencies are immutable (`final`), makes required dependencies explicit, and works well with unit testing. 
-
-- **Setter injection** — optional dependencies, allows reconfiguration after construction. 
-
-- **Field injection** (`@Autowired` on the field) — discouraged, harder to test and hides dependencies.
-
-- ```java
-  @Service
-  public class OrderService {
-      private final PaymentService paymentService;
-      public OrderService(PaymentService paymentService) { // constructor injection — preferred
-          this.paymentService = paymentService;
-      }
-  }
-  ```
-
-- Bean scope: default is `singleton` (one shared instance); use `prototype` for a new instance per request.
-
-
-**45. @Configuration.**
+**45. @Configuration.*
 
 ```java
 @Configuration
@@ -679,6 +590,12 @@ Stops repeatedly calling a failing service — after enough failures, it "opens"
 **76. Retry vs Circuit Breaker.**
 **Retry** = try the same failing call again (a few times), useful for transient/temporary glitches. **Circuit Breaker** = stops calling entirely after repeated failures, useful when a service is consistently down, to avoid wasting resources. Often used together — retry a few times, then circuit breaker kicks in if it keeps failing.
 
+
+
+**Q. when a request hit from user to server, complete flow inlcuding netwrk 7 layer.** 
+
+http vs https
+
 ---
 
 ## Database & SQL
@@ -826,21 +743,6 @@ SELECT * FROM (
 ) t WHERE rnk <= 3;
 ```
 
-**81. Highest, 2nd highest salary.**
-
-```sql
--- Highest salary
-SELECT MAX(salary) FROM employees;
-
--- 2nd highest salary
-SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees);
-
--- Department-wise 2nd Highest Salaries (handles ties correctly)
-SELECT name, salary FROM (
-  SELECT name, salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk FROM employees
-) t WHERE rnk = 2;
-```
-
 **82. SQL — grouping by, having, joins.**
 
 ```sql
@@ -955,3 +857,268 @@ Yes — I understand production deployments sometimes need off-peak timing to mi
 
 **105. Are you comfortable taking ownership of a module?**
 Yes — I built the Recruitment Tracking System and the User Source Code Mapping tool end-to-end, from requirements to deployment.
+
+
+
+---
+
+## **Coding Exercises**
+
+**28. Find the top 3 highest-paid employees from each department. using Stream API.**
+
+- First I group employees by department, then sort each department by salary in descending order and limit the result to the top 3 employees.
+
+- ```java
+  public class S11 {
+      public static void main(String[] args) {
+          List<Employee> employees = List.of(
+                  new Employee(1, "Rahul", "IT", 90000),
+                  new Employee(2, "Amit", "IT", 75000),
+                  new Employee(3, "Priya", "IT", 85000),
+                  new Employee(4, "Sneha", "IT", 65000),
+                  new Employee(5, "Raj", "HR", 70000),
+                  new Employee(6, "Neha", "HR", 80000),
+                  new Employee(7, "Arjun", "HR", 60000),
+                  new Employee(8, "Riya", "HR", 75000),
+                  new Employee(9, "Vikash", "Finance", 95000),
+                  new Employee(10, "Pooja", "Finance", 85000),
+                  new Employee(11, "Karan", "Finance", 90000),
+                  new Employee(12, "Anjali", "Finance", 70000)
+          );
+  
+          Map<String, List<Employee>> result = employees.stream()
+                  .collect(Collectors.groupingBy(
+                                  Employee::getDept, Collectors.collectingAndThen(    // Department-wise groups, IT → [Rahul, Amit, Priya, Sneha]
+                                          Collectors.toList(), list -> list.stream()
+                                                  .sorted(Comparator.comparing(Employee::getSalary).reversed()) // sort using salary, highest first
+                                                  .limit(3)                   // Take only the first 3 employees:
+                                                  .toList()
+                                  )
+                          )
+                  );
+          result.forEach((dept, empList) ->
+                  System.out.println(dept + " : " + empList.stream().map(Employee::getSalary).toList())
+          );
+      }
+  }
+  /* OUTPUT
+  Finance : [95000, 90000, 85000]
+  HR : [80000, 75000, 70000]
+  IT : [90000, 85000, 75000]
+  ```
+
+
+**Q. 3rd, 4th highest salary code**
+
+- ```java
+  // INPUT: Salaries: 50000, 80000, 60000, 90000, 70000
+  
+  Optional<Integer> thirdHighest =
+      employees.stream()
+               .map(Employee::getSalary)
+               .distinct()
+               .sorted(Comparator.reverseOrder())		// Sorted:   90000, 80000, 70000, 60000, 50000
+               .skip(2)
+               .findFirst();				// 70000
+  
+  Optional<Integer> fourthHighest =
+      employees.stream()
+               .map(Employee::getSalary)
+               .distinct()
+               .sorted(Comparator.reverseOrder())
+               .skip(3)
+               .findFirst();				// 60000
+  ```
+
+
+
+**29. Reverse words in a string.**
+
+- ```java
+  String input = "backend java developer";
+  String[] words = input.split(" ");
+  Collections.reverse(Arrays.asList(words));
+  String result = String.join(" ", words);
+  System.out.println(result);
+  // Output: developer java backend
+  ```
+
+
+**31. Given a string, find the index of the first non-repeating character.**
+
+- ```java
+  // Given a string, find the index of the first non-repeating character.
+  public class FirstNonRepeating_2 {
+      public static int firstNonRepeating(String input) {
+          String[] split = input.split("");
+  
+          Map<String, Long> groupedLinkedHashMap = Arrays.asList(split).stream().collect(
+                  Collectors.groupingBy(
+                          Function.identity(), LinkedHashMap::new, Collectors.counting()
+                  )
+          );
+          System.out.println(groupedLinkedHashMap);   // {s=3, w=1, i=1} 
+  
+          return groupedLinkedHashMap.entrySet().stream()
+                  .filter(mapItem -> mapItem.getValue() == 1)
+                  .map(mapItem -> input.indexOf(mapItem.getKey()))
+                  .findFirst()
+                  .orElse(-1);
+      }
+  
+      public static void main(String[] args) {
+          System.out.println(firstNonRepeating("swiss")); // Output: 1
+          System.out.println(firstNonRepeating("leetcode"));  // Output: 0
+          System.out.println(firstNonRepeating("aabbcc"));  // Output: -1
+      }
+  }
+  ```
+
+
+
+
+**38. Two threads alternately printing odd and even numbers (1–100) using wait()/notify().**
+
+- ```java
+  class Printer {
+      private int num = 1;
+      private final int max = 100;
+      synchronized void printOdd() {
+          while (num <= max) {
+              while (num % 2 == 0) { try { wait(); } catch (InterruptedException e) {} }
+              System.out.println("Odd: " + num++);
+              notify();
+          }
+      }
+      synchronized void printEven() {
+          while (num <= max) {
+              while (num % 2 != 0) { try { wait(); } catch (InterruptedException e) {} }
+              System.out.println("Even: " + num++);
+              notify();
+          }
+      }
+  }
+  Printer p = new Printer();
+  new Thread(p::printOdd).start();
+  new Thread(p::printEven).start();
+  // Output: Odd: 1, Even: 2, Odd: 3, Even: 4 ... up to 100
+  ```
+
+
+
+
+**Q. Print numbers 1–10 using 3 threads in sequence using `ReentrantLock`**
+
+- Expected order:
+
+- ```
+  Thread 1: 1, 4, 7, 10
+  Thread 2: 2, 5, 8
+  Thread 3: 3, 6, 9
+  ```
+
+- ```java
+  // Solution 1: using ReentrantLock → Condition.await() / signalAll()
+  import java.util.concurrent.locks.ReentrantLock;
+  class NumberPrinter {
+  
+      private int number = 1;
+      private final ReentrantLock lock = new ReentrantLock();
+      public void print(int threadNo) {
+  
+          while (true) {
+              lock.lock();
+              try {
+                  if (number > 10)
+                      return;
+                  if (number % 3 == threadNo % 3) {
+                      System.out.println("Thread " + threadNo + " : " + number++);
+                  }
+              } finally {
+                  lock.unlock();
+              }
+          }
+      }
+  }
+  
+  public class Main {
+      public static void main(String[] args) {
+  
+          NumberPrinter printer = new NumberPrinter();
+          for (int i = 1; i <= 3; i++) {
+              int threadNo = i;
+              new Thread(() -> printer.print(threadNo)).start();
+          }
+      }
+  }
+  /* OUTPUT
+  Thread 1 : 1
+  Thread 2 : 2
+  Thread 3 : 3
+  Thread 1 : 4
+  Thread 2 : 5
+  Thread 3 : 6
+  Thread 1 : 7
+  Thread 2 : 8
+  Thread 3 : 9
+  Thread 1 : 10
+  ```
+
+- ```java
+  // Solution 2: Using synchronized → wait() / notifyAll()
+  class NumberPrinter {
+      private int number = 1;
+  
+      public synchronized void print(int threadNumber) throws InterruptedException {
+  
+          while (number <= 10) {
+              while (number <= 10 && number % 3 != threadNumber % 3) {
+                  wait();
+              }
+              if (number <= 10) {
+                  System.out.println("Thread " + threadNumber + " : " + number);
+                  number++;
+                  notifyAll();
+              }
+          }
+      }
+  }
+  
+  public class Main {
+      public static void main(String[] args) {
+  
+          NumberPrinter printer = new NumberPrinter();
+  
+          for (int i = 1; i <= 3; i++) {
+              int threadNumber = i;
+  
+              new Thread(() -> {
+                  try {
+                      printer.print(threadNumber);
+                  } catch (InterruptedException e) {
+                      Thread.currentThread().interrupt();
+                  }
+              }).start();
+          }
+      }
+  }
+  ```
+
+
+
+
+**81. Highest, 2nd highest salary.**
+
+- ```sql
+  -- Highest salary
+  SELECT MAX(salary) FROM employees;
+  
+  -- 2nd highest salary
+  SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees);
+  
+  -- Department-wise 2nd Highest Salaries (handles ties correctly)
+  SELECT name, salary FROM (
+    SELECT name, salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk FROM employees
+  ) t WHERE rnk = 2;
+  ```
+
